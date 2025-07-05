@@ -11,6 +11,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { AboutComponent } from './about/about.component'
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SkillsComponent } from './skills/skills.component';
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SkillsComponent } from './skills/skills.component';
     HomeComponent,
     NavbarComponent,
     AboutComponent,
-    SkillsComponent
+    SkillsComponent,
+    EducationComponent,
+    ExperienceComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
