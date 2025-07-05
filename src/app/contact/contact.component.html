@@ -1,5 +1,5 @@
 <section class="contact" id="contact">
-  
+
   <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
 
   <div class="container">
@@ -7,31 +7,41 @@
       <div class="image-box">
         <img draggable="false" src="./assets/images/contact1.png" alt="">
       </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
+
+      <form [formGroup]="contact" #contactForm>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input type="text" matInput formControlName="Name" name="Name" (keypress)="allowOnlyLetters($event)">
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-error>Field must be required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="Email" name="Email">
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-error *ngIf="contact.get('Email')?.hasError('required')">Field must be required</mat-error>
+          <mat-error *ngIf="contact.get('Email')?.hasError('email')">Invalid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input type="text" matInput formControlName="Phone" name="Phone" [maxlength]="10" (keypress)="allowOnlyDigits($event)">
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-error *ngIf="contact.get('Phone')?.hasError('required')">Field must be required</mat-error>
+          <mat-error *ngIf="contact.get('Phone')?.hasError('pattern') && contact.get('Phone')?.value">Invalid Phone No</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Reason for contact</mat-label>
+          <textarea matInput formControlName="Reason" name="Reason for Contact"></textarea>
+          <mat-icon matSuffix>chat</mat-icon>
+          <mat-error>Field must be required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button type="button" style="background-color:#3f51b5;color: white;" (click)="submit($event)">Submit</button>
+        <button type="reset" style="background-color:#f44336;color: white;" mat-raised-button>Reset</button>
+      </form>
+    </div>
   </div>
 </section>

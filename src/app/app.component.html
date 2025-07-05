@@ -2,6 +2,10 @@
 <!-- <div class="loader-container">
   <img draggable="false" src="./assets/images/preloader.gif" alt="">
 </div> -->
+<!-- <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-clip-rotate-multiple" 
+[fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner> -->
+<!-- <ngx-spinner type="ball-scale-multiple"></ngx-spinner> -->
+<ngx-spinner type="square-jelly-box" [fullScreen]="true" size="medium" bdColor="rgba(0, 0, 0, 0.8)" color="#fff"></ngx-spinner>
 
 <!-- navbar starts -->
 <!-- <header>
@@ -338,9 +342,9 @@
 
       <div class="box">
           <h3>contact info</h3>
-          <p> <i class="fas fa-phone"></i>+91 XXX-XXX-XXXX</p>
+          <p> <i class="fas fa-phone"></i>+91 6380509672</p>
           <p> <i class="fas fa-envelope"></i>{{'satheshg01@gmail.com'}}</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Dharmapuri, Tamil Nadu, India-412206</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Dharmapuri, Tamil Nadu, India - 636903</p>
           <div class="share">
 
               <a href="https://www.linkedin.com/in/jigar-sable" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
@@ -359,11 +363,10 @@
 
 
 <!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a> -->
 
 <a aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"
-   [class.active]="showScrollTop"
-   (click)="scrollToHome()">
+   [class.active]="showScrollTop" (click)="scrollToHome()">
 </a>
 <!-- scroll back to top -->
 

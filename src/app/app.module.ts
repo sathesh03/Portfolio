@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule  } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,13 @@ import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
   ],
   providers: [
     provideClientHydration(),

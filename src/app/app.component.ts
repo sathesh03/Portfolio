@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import Typed from 'typed.js';
 
 @Component({
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   isBrowser: boolean;
   showScrollTop = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private spinner: NgxSpinnerService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
@@ -97,7 +98,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-   @ViewChild('homeSection', { static: true }) homeSection!: ElementRef;
+   @ViewChild('homeSection', { static: true }) homeComponent!: any;
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
@@ -105,8 +106,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   scrollToHome(): void {
-    if (this.homeSection?.nativeElement) {
-      this.homeSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    console.log(this.homeComponent?.nativeElement);
+    
+    if (this.homeComponent?.nativeElement) {
+      this.homeComponent.nativeElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
   

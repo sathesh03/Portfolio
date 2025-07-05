@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  @ViewChild('homeRoot', { static: true }) homeRoot!: ElementRef;
+
+get nativeElement() {
+  return this.homeRoot.nativeElement;
+}
 }
