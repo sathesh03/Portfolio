@@ -22,6 +22,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ProjectComponent } from './project/project.component';
+import { TestComponent } from './test/test.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { ProjectComponent } from './project/project.component';
     EducationComponent,
     ExperienceComponent,
     ContactComponent,
-    ProjectComponent
+    ProjectComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +52,8 @@ import { ProjectComponent } from './project/project.component';
     MatSnackBarModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [
     provideClientHydration(),

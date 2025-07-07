@@ -7,15 +7,14 @@
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
+  z-index: 1;
+  pointer-events: none; 
+  overflow: hidden;
 }
 
-    // .home #particles-js {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   height: 100%;
-    //   width: 100%;
-    // }
+.home * {
+  pointer-events: auto;
+}
 .home::before {
   content: "";
   position: absolute;
@@ -30,6 +29,9 @@
 }
 .image{
     flex: 1 1 40rem;
+    position: relative;         // ✅ ensure stacking context
+  z-index: 1;                 // ✅ ensure above particles, but allow hover
+  height: 100%;  
 }
 // .home .content {
 //   flex: 1 1 40rem;
@@ -181,6 +183,7 @@
   z-index: 0; // keep it behind your content
   top: 0;
   left: 0;
+  pointer-events: auto; 
 }
 
 :host {

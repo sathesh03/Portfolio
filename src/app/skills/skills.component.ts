@@ -31,6 +31,7 @@ export class SkillsComponent {
     { name: 'CSS', icon: 'https://img.icons8.com/color/48/css3.png' },
     { name: 'CSS3', icon: 'https://img.icons8.com/color/48/000000/css3.png' },
     { name: 'Sass', icon: 'https://img.icons8.com/color/48/000000/sass.png' },
+    { name: 'Tailwind CSS', icon: 'assets/images/skills/TailwindCSS.png' },
     {
       name: 'jQuery',
       icon: 'https://img.icons8.com/ios-filled/48/1169ae/jquery.png',
