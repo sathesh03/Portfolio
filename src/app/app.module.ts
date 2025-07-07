@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     SkillsComponent,
     EducationComponent,
     ExperienceComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
