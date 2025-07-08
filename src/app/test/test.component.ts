@@ -22,13 +22,13 @@ export class TestComponent implements AfterViewInit {
   }
 
   toggleMenu() {
-     if (this.isMobile && this.sidenav) {
+     if (this.sidenav) {
     this.sidenav.toggle();
   }
   }
 
   closeSidenav() {
-  if (this.isMobile && this.sidenav) {
+  if (this.sidenav) {
     this.sidenav.close();
   }
 }

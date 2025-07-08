@@ -1,4 +1,78 @@
- // footer section starts 
+// navbar section starts
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5% 1.5rem 10%;
+    background-color: #fff;
+    
+    span,
+    i {
+        font-size: 1.9rem;
+        font-weight: 800;
+    }
+
+    span,
+    i,
+    a:hover {
+        text-decoration: none;
+        color: #0e2431;
+        background: var(--red-to-pink-to-purple-horizontal-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+
+        label {
+            border-bottom: 0.2rem solid var(--electric-violet);
+        }
+    }
+
+    a.active label {
+        border-bottom: 0.2rem solid var(--electric-violet);
+        background: var(--red-to-pink-to-purple-horizontal-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    a {
+        padding: .2% 1.5%;
+        letter-spacing: 0.04rem;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #0e2431;
+        transition: color 0.3s ease;
+
+        label {
+            border-bottom: 0 solid transparent;
+            padding: 0.5rem 0;
+        }
+    }
+
+    i {
+        font-size: 2.2rem;
+    }
+}
+
+mat-drawer{
+  margin-top: 9%;
+}
+// navbar section end
+
+// footer section starts 
 .footer {
   min-height: auto;
   padding-top: 0;

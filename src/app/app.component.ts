@@ -1,5 +1,7 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +11,17 @@ import { Component, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from 
 export class AppComponent implements OnInit {
   title = 'Portfolio';
 
-  // private typed: Typed | undefined;
+  @ViewChild('sidenav') sidenav!: MatSidenav;
   isBrowser: boolean;
   showScrollTop = false;
+  isMobile: boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private observer: BreakpointObserver) {
     this.isBrowser = isPlatformBrowser(this.platformId);
+
+    this.observer.observe(['(max-width: 767px)']).subscribe(result => {
+    this.isMobile = result.matches;
+  });
   }
 
   ngOnInit(): void {
@@ -103,9 +110,7 @@ export class AppComponent implements OnInit {
     this.showScrollTop = window.scrollY > 60;
   }
 
-  scrollToHome(): void {
-    console.log(this.homeComponent?.nativeElement);
-    
+  scrollToHome(): void {    
     if (this.homeComponent?.nativeElement) {
       this.homeComponent.nativeElement.scrollIntoView({ behavior: 'smooth' });
     }
@@ -129,4 +134,16 @@ export class AppComponent implements OnInit {
   //   this.typed?.destroy(); // clean up to avoid memory leaks
   //   //  document.removeEventListener('visibilitychange', this.visibilityHandler);
   // }
+
+  toggleMenu() {
+  if (this.sidenav) {
+    this.sidenav.toggle();
+  }
+}
+
+closeSidenav() {
+  if (this.sidenav) {
+    this.sidenav.close();
+  }
+}
 }
