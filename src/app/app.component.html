@@ -1,55 +1,50 @@
-<ngx-spinner type="square-jelly-box" [fullScreen]="true" size="medium" bdColor="rgba(0, 0, 0, 0.8)" color="#fff"></ngx-spinner>
+<ngx-spinner type="square-jelly-box" [fullScreen]="true" size="medium" bdColor="rgba(0, 0, 0, 0.8)"
+  color="#fff"></ngx-spinner>
 
 <mat-toolbar color="primary" class="mat-elevation-z8">
-  <button *ngIf="isMobile" (click)="drawer.toggle()" mat-icon-button>
-      <mat-icon>menu</mat-icon>
+  <button style="border: none;" *ngIf="isMobile" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
   </button>
-    <span><i class="fab fa-angular"></i> SATHESH</span>
+  <span><i class="fab fa-angular"></i> SATHESH</span>
   <span class="example-spacer"></span>
   <ng-container *ngIf="!isMobile">
-  <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><label>Home</label></a>
-  <a routerLink="/about" routerLinkActive="active"><label>About</label></a>
-  <a routerLink="/skills" routerLinkActive="active"><label>Skills</label></a>
-  <a routerLink="/education" routerLinkActive="active"><label>Education</label></a>
-  <a routerLink="/project" routerLinkActive="active"><label>Work</label></a>
-  <a routerLink="/experience" routerLinkActive="active"><label>Experience</label></a>
-  <a routerLink="/contact" routerLinkActive="active"><label>Contact</label></a>
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><label>Home</label></a>
+    <a routerLink="/about" routerLinkActive="active"><label>About</label></a>
+    <a routerLink="/skills" routerLinkActive="active"><label>Skills</label></a>
+    <a routerLink="/education" routerLinkActive="active"><label>Education</label></a>
+    <a routerLink="/project" routerLinkActive="active"><label>Work</label></a>
+    <a routerLink="/experience" routerLinkActive="active"><label>Experience</label></a>
+    <a routerLink="/contact" routerLinkActive="active"><label>Contact</label></a>
   </ng-container>
 </mat-toolbar>
 <mat-drawer-container>
   <mat-drawer #drawer opened="false" mode="over" position="start">
-      <mat-nav-list>
-      <a mat-list-item routerLink="/home" (click)="closeSidenav()">Home</a>
-            <a mat-list-item routerLink="/about" (click)="closeSidenav()">About</a>
-            <a mat-list-item routerLink="/skill" (click)="closeSidenav()">Skills</a>
-            <a mat-list-item routerLink="/education" (click)="closeSidenav()">Education</a>
-            <a mat-list-item routerLink="/project" (click)="closeSidenav()">Work</a>
-            <a mat-list-item routerLink="/experience" (click)="closeSidenav()">Experience</a>
-            <a mat-list-item routerLink="/contact" (click)="closeSidenav()">Contact</a>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" (click)="drawer.close()">Home</a>
+      <a mat-list-item routerLink="/about" (click)="drawer.close()">About</a>
+      <a mat-list-item routerLink="/skill" (click)="drawer.close()">Skills</a>
+      <a mat-list-item routerLink="/education" (click)="drawer.close()">Education</a>
+      <a mat-list-item routerLink="/project" (click)="drawer.close()">Work</a>
+      <a mat-list-item routerLink="/experience" (click)="drawer.close()">Experience</a>
+      <a mat-list-item routerLink="/contact" (click)="drawer.close()">Contact</a>
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>
-      <div>
-          <router-outlet />
-
-          </div>
-  </mat-drawer-content>
-</mat-drawer-container>
 
 <!-- <app-navbar style="position: fixed;z-index: 1000;"></app-navbar> -->
 <div class="component-wrapper">
-    <!-- <app-test></app-test> -->
-<!-- <app-home #homeSection></app-home> -->
-<!-- <app-about></app-about> -->
-<!-- <app-skills></app-skills> -->
-<!-- <app-education></app-education> -->
-<!-- <app-project></app-project> -->
-<!-- <app-experience></app-experience> -->
-<!-- <app-contact></app-contact> -->
+  <!-- <app-test></app-test> -->
+  <app-home #homeSection></app-home>
+  <app-about></app-about>
+  <app-skills></app-skills>
+  <app-education></app-education>
+  <!-- <app-project></app-project> -->
+  <app-experience></app-experience>
+  <app-contact></app-contact>
 </div>
 
 <!-- footer section starts -->
-<!-- <section class="footer mat-elevation-z8">
+<section class="footer mat-elevation-z8">
   <div class="box-container">
       <div class="box">
           <h3>Sathesh's Portfolio</h3>
@@ -70,13 +65,15 @@
           </div>
       </div>
   </div>
-</section> -->
+</section>
 <!-- footer section ends -->
 
 <!-- scroll top btn -->
-<a aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"
-   [class.active]="showScrollTop" (click)="scrollToHome()">
+<a aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top" [class.active]="showScrollTop"
+  (click)="scrollToHome()">
 </a>
 <!-- scroll back to top -->
 
 <!-- <router-outlet /> -->
+   </mat-drawer-content>
+</mat-drawer-container>

@@ -1,5 +1,26 @@
 /* hero section starts*/
 
+// button{
+//   letter-spacing: 2px;
+//   font-weight: bold;
+//   font-size: x-large;
+//   padding: 5%;
+//   background-color: #3f51b5;
+//   color: white;
+//   i {
+//   margin-left: 0.3rem;
+//   font-size: 1.5rem;
+//   transition: 0.3s;
+// }
+// }
+// button:hover {
+//   background-color: #303f9f;
+//   color: white;
+// }
+// button:hover i {
+//   transform: translateX(5px);
+// }
+
 .home {
   position: relative;
   display: flex;
@@ -15,14 +36,14 @@
 .home * {
   pointer-events: auto;
 }
-.home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
+// .home::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+// }
 .content{
     flex: 1 1 30rem;
     padding: 2rem;

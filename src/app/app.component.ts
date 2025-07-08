@@ -134,16 +134,4 @@ export class AppComponent implements OnInit {
   //   this.typed?.destroy(); // clean up to avoid memory leaks
   //   //  document.removeEventListener('visibilitychange', this.visibilityHandler);
   // }
-
-  toggleMenu() {
-  if (this.sidenav) {
-    this.sidenav.toggle();
-  }
-}
-
-closeSidenav() {
-  if (this.sidenav) {
-    this.sidenav.close();
-  }
-}
 }

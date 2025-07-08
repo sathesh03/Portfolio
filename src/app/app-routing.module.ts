@@ -10,7 +10,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProjectComponent } from './project/project.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent,pathMatch: 'full'},
+  {path:'home',component:HomeComponent,pathMatch: 'full'},
   {path: 'home',component:HomeComponent},
   {path: 'navbar',component:NavbarComponent},
   {path:'about',component:AboutComponent},
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'education',component:EducationComponent},
   {path:'experience',component:ExperienceComponent},
   {path:'project',component:ProjectComponent},
-  {path: '**', redirectTo: '' },
+  {path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

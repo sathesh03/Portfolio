@@ -218,3 +218,30 @@ mat-drawer{
 // app-education {
 //   margin-top: -100px !important;
 // }
+
+@media screen and (max-width:767px) {
+  
+  mat-toolbar{
+    padding: 0;
+    button{
+      margin: 0 2%;
+    }
+  }
+}
+
+@media screen and (max-width:992px) {
+  
+  mat-toolbar{
+    padding: 0;
+   span{
+    margin-left: 2%;
+    font-size: x-large;
+   }
+   i{
+    font-size: xx-large;
+   }
+   a{
+    font-size: small;
+   }
+  }
+}
