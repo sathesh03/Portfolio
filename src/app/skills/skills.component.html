@@ -8,7 +8,7 @@
     <div class="row" id="skillsContainer">
       <div class="bar" *ngFor="let skill of skills">
         <div class="info">
-          <img [src]="skill.icon" alt="skill" />
+          <img [src]="skill.icon" [className]="skill.class" alt="skill" />
           <span>{{ skill.name }}</span>
         </div>
       </div>

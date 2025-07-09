@@ -41,9 +41,7 @@ async ngAfterViewInit(): Promise<void> {
       });
 
       // particles.js
-      // await import('particles.js'); // loads the library and registers global particlesJS
       if (isPlatformBrowser(this.platformId)) {
-      //  await import('particles.js');
         particlesJS('particles-js', {
           particles: {
             number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -86,6 +84,7 @@ async ngAfterViewInit(): Promise<void> {
     }
 
     if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
       import('scrollreveal').then((ScrollReveal) => {
         const sr = ScrollReveal.default({
           origin: 'top',
@@ -94,17 +93,12 @@ async ngAfterViewInit(): Promise<void> {
           reset: true
         });
 
-        sr.reveal('.content h3', { delay: 200 });
-        sr.reveal('.content p', { delay: 200 });
+        sr.reveal('.content h2', { delay: 200 });
         sr.reveal('.content .btn', { delay: 200 });
         sr.reveal('.image', { delay: 400 });
-        sr.reveal('.linkedin', { interval: 600 });
-        sr.reveal('.github', { interval: 800 });
-        sr.reveal('.twitter', { interval: 1000 });
-        sr.reveal('.telegram', { interval: 600 });
-        sr.reveal('.instagram', { interval: 600 });
-        sr.reveal('.dev', { interval: 600 });
+       sr.reveal('.socials a', { interval: 200 })
       });
+    },0)
     }
 
     const elements = this.elRef.nativeElement.querySelectorAll('.tilt');
@@ -118,6 +112,5 @@ async ngAfterViewInit(): Promise<void> {
 
    ngOnDestroy(): void {
     this.typed?.destroy(); // clean up to avoid memory leaks
-    //  document.removeEventListener('visibilitychange', this.visibilityHandler);
   }
 }

@@ -86,6 +86,7 @@ export class SkillsComponent {
     { name: 'Microservice', icon: 'assets/images/skills/microservice.png' }, // fixed 000000
     { name: 'VB.NET', icon: 'assets/images/skills/vbdotnet_transparent.png' },
     { name: 'SSRS', icon: 'assets/images/skills/ssrs.png' },
+    { name: 'Microsoft IIS', icon: 'assets/images/skills/microsoft-iis-transparent.png',class:"iis"},
   ];
 
   ngAfterViewInit(): void {
