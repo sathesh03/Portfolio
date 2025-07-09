@@ -1,25 +1,24 @@
-/* hero section starts*/
+// hero section starts
 
-// button{
-//   letter-spacing: 2px;
-//   font-weight: bold;
-//   font-size: x-large;
-//   padding: 5%;
-//   background-color: #3f51b5;
-//   color: white;
-//   i {
-//   margin-left: 0.3rem;
-//   font-size: 1.5rem;
-//   transition: 0.3s;
-// }
-// }
-// button:hover {
-//   background-color: #303f9f;
-//   color: white;
-// }
-// button:hover i {
-//   transform: translateX(5px);
-// }
+button{
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: x-large;
+  padding: 4%;
+  background-color: #3f51b5 !important;
+  color: white !important;
+  i {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+}
+button:hover {
+  background-color: #303f9f !important;
+}
+button:hover i {
+  transform: translateX(5px);
+}
 
 .home {
   position: relative;
@@ -36,35 +35,36 @@
 .home * {
   pointer-events: auto;
 }
-// .home::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
+// // .home::before {
+// //   content: "";
+// //   position: absolute;
+// //   top: 0;
+// //   left: 0;
+// //   height: 100%;
+// //   width: 100%;
+// // }
+// .content{
+//     flex: 1 1 40rem;
+//     padding-left: 6rem;
+//     padding-top: 4rem;
 // }
-.content{
-    flex: 1 1 30rem;
-    padding: 2rem;
-}
-.image{
-    flex: 1 1 40rem;
-    position: relative;         // ✅ ensure stacking context
-  z-index: 1;                 // ✅ ensure above particles, but allow hover
-  height: 100%;  
-}
-// .home .content {
-//   flex: 1 1 40rem;
-//   padding: 1rem;
-//   z-index: 1;
+// .image{
+//     flex: 1 1 40rem;
+//     position: relative;         // ✅ ensure stacking context
+//   z-index: 1;                 // ✅ ensure above particles, but allow hover
+//   height: 100%;  
 // }
-// .home .image {
-//   flex: 1 1 30rem;
-//   z-index: 1;
-// }
+// // .home .content {
+// //   flex: 1 1 40rem;
+// //   padding: 1rem;
+// //   z-index: 1;
+// // }
+// // .home .image {
+// //   flex: 1 1 30rem;
+// //   z-index: 1;
+// // }
 .home .image img {
-  width: 70%;
+  // width: 70%;
   margin-left: 6rem;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -73,72 +73,52 @@
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+
+.content{
+  padding: 10%;
+}
+
+.image{
+  padding-top: 10%;
+}
+
 .home .content h2 {
-  font-size: 3rem;
-//   font-weight: 800;
+  font-size: xx-large;
+  font-weight: 800;
   color: #002057;
 }
 .home .content h2 span {
-  font-size: 3rem;
+  font-size: xx-large;
   font-weight: 800;
   color: #ff7b00;
 }
-// .home .content p {
-//   font-size: 2.5rem;
-//   color: #000;
-//   font-weight: 600;
-//   padding: 1rem 0;
+
+// .socials{
+//   font-size: xx-large;
+//   padding: 5%;
+//   a{
+//     border: 1px solid #ccc;
+//     padding: 1%;
+//     border-radius: 50px;
+//     margin: .5%;
+//     background-color: #00d9ff;
+//   }
 // }
-// .home .content p span {
-//   font-size: 2.5rem;
-//   color: rgb(148, 8, 8);
-//   font-weight: 600;
-//   padding: 1rem 0;
+// /* social icons start */
+// .socials {
+//   // position: relative;
+//   margin-top: 1rem;
 // }
-.home .btn {
-  margin-top: 1rem;
-  position: absolute;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 4em;
-  transition: 0.5s;
-  color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
-  text-decoration: none;
-//   font-family: "Nunito", sans-serif; 
-}
-.home .btn span {
-  font-weight: 700;
-  font-size: 1.7rem;
-  letter-spacing: 0.1rem;
-}
-.home .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-.home .btn:hover {
-  background: #1a047e;
-}
-.home .btn:hover i {
-  transform: translateX(5px);
-}
-/* social icons start */
-.socials {
-  position: relative;
-  margin-top: 9rem;
-}
-.socials .social-icons {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-.socials .social-icons li {
-  display: inline-block;
-  margin-bottom: 14px;
-}
-.social-icons a {
+// .socials .social-icons {
+//   padding-left: 0;
+//   margin-bottom: 0;
+//   list-style: none;
+// }
+// .socials .social-icons li {
+//   display: inline-block;
+//   margin-bottom: 14px;
+// }
+.socials a {
   font-size: 2rem;
   display: inline-block;
   line-height: 44px;
@@ -153,49 +133,49 @@
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.social-icons a:active,
-.social-icons a:focus,
-.social-icons a:hover {
+.socials a:active,
+.socials a:focus,
+.socials a:hover {
   color: #fff;
   background-color: #0685da;
 }
-.social-icons a.github:hover {
+.socials a.github:hover {
   background-color: #0e0e0e;
 }
-.social-icons a.twitter:hover {
+.socials a.twitter:hover {
   background-color: #00aced;
 }
-.social-icons a.linkedin:hover {
+.socials a.linkedin:hover {
   background-color: #007bb6;
 }
-.social-icons a.dev:hover {
+.socials a.dev:hover {
   background-color: #070707;
 }
-.social-icons a.instagram:hover {
-  background-color: #ee00da;
+.socials a.instagram:hover {
+  background-color: #E1306C;
 }
-/* social icons end */
+// /* social icons end */
 
-/* hero media queries starts*/
-@media (max-width: 450px) {
-  .home .btn {
-    margin: 4rem 0;
-  }
-  .socials {
-    margin-top: 12rem;
-  }
-  .home .image img {
-    margin-top: -12rem;
-  }
-  .home .content p {
-    font-size: 2.2rem;
-  }
-  .home .content p span {
-    font-size: 2.2rem;
-  }
-}
-/* hero media queries ends*/
-/* hero section end */
+// /* hero media queries starts*/
+// // @media (max-width: 450px) {
+// //   .home .btn {
+// //     margin: 4rem 0;
+// //   }
+// //   .socials {
+// //     margin-top: 12rem;
+// //   }
+// //   .home .image img {
+// //     margin-top: -12rem;
+// //   }
+// //   .home .content p {
+// //     font-size: 2.2rem;
+// //   }
+// //   .home .content p span {
+// //     font-size: 2.2rem;
+// //   }
+// // }
+// /* hero media queries ends*/
+// /* hero section end */
 
 .particles-container {
   position: absolute;
@@ -207,8 +187,28 @@
   pointer-events: auto; 
 }
 
-:host {
-  position: relative;
-  display: block;
-  overflow: hidden;
+// :host {
+//   position: relative;
+//   display: block;
+//   overflow: hidden;
+// }
+
+@media screen and (max-width:992px) and (max-width:1200px){
+.content{
+  padding-left: 5%;
 }
+
+.image{
+  padding-left: 0;
+}
+
+*{
+  font-size: medium;
+}
+}
+
+// @media screen and (max-width:992px){
+// .content{
+//   padding: 8%;
+// }
+// }
