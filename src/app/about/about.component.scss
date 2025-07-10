@@ -1,7 +1,6 @@
 
 .about {
   background: rgb(255, 255, 255);
-  // padding-top: 5px;
 }
 .heading {
   font-size: 3.5rem;
@@ -13,34 +12,6 @@
   color: rgb(115, 3, 167);
 }
 
-// // .row{
-// //   display: flex;
-// // }
-
-// // .content {
-// //   flex: 1 1 40rem;
-// //   padding-top: 1rem;
-// //   z-index: 1;
-// // }
-// // .image {
-// //   flex: 1 1 40rem;
-// //   z-index: 1;
-// // }
-
-// .about .row {
-//   display: flex;
-//   flex-direction: row;
-//   gap: 2rem;
-//   flex-wrap: no-wrap;
-//   // padding: 4rem;
-// }
-// .about .row .image {
-//   flex: 1 1 30%;
-// }
-
-// .about .row .content {
-//   flex: 1 1 70%;
-// }
 .image{
  background: linear-gradient(to bottom right, white, white);
 
@@ -54,21 +25,8 @@
   cursor: pointer;
 }
 }
-.image img:hover{
+// .image img:hover{
   // mix-blend-mode: normal;
-}
-// .about .row .image img {
-//   margin: 4rem;
-//   width: 30rem;
-//   height: auto;
-//   border-radius: 5%;
-//   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-//   mix-blend-mode: luminosity;
-//   transition: 0.3s;
-//   cursor: pointer;
-// }
-// .about .row .image img:hover {
-//   mix-blend-mode: normal;
 // }
 
 .content{
@@ -87,11 +45,9 @@
   }
   
   p{
-    // font-weight: 600;
     font-size: 1rem;
     text-transform: none;
     line-height: 1.5rem;
-    // font-family: "Nunito";
   }
 
   .box-container {
@@ -101,44 +57,10 @@
     span{
     color: #3f51b5;
     font-weight: bold;
-  //    display: flex;
-  // flex-wrap: wrap;
-  // gap: 1.5rem;
-  // font-family: "Nunito";
-  // font-weight: 600;
   }
 }
 }
-// .content h3 {
-//   color: rgb(27, 27, 27);
-//   font-size: 2.5rem;
-// }
-// .content .tag {
-//   font-size: 1.4rem;
-//   color: #020133;
-//   font-weight: 600;
-//   margin-top: 1rem;
-// }
-// .about .row .content p {
-//   font-size: 1.5rem;
-//   margin-top: 1.5rem;
-//   font-family: "Nunito";
-//   font-weight: 600;
-//   text-transform: none;
-// }
-// .about .row .content .box-container {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 1.5rem;
-//   font-family: "Nunito";
-//   font-weight: 600;
-// }
-// .about .row .content .box-container .box p {
-//   text-transform: none;
-// }
-// .about .row .content .box-container .box p span {
-//   color: #011aff;
-// }
+
 .resumebtn{
   margin-top: 2rem;
   letter-spacing: 0.1rem;
@@ -160,56 +82,6 @@
 .resumebtn:hover i {
   transform: translateX(5px);
 }
-// .resumebtn {
-//   margin-top: 6rem;
-// }
-// .resumebtn .btn {
-//   padding: 1.7rem 3rem;
-//   border-radius: 0.5em;
-//   transition: 0.3s;
-//   color: #fff;
-//   background: #2506ad;
-//   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-//   font-family: "Nunito", sans-serif;
-//   text-decoration: none;
-// }
-// .resumebtn .btn span {
-//   font-weight: 600;
-//   font-size: 1.8rem;
-//   letter-spacing: 0.1rem;
-// }
-// .resumebtn .btn i {
-//   margin-left: 0.3rem;
-//   font-size: 1.2rem;
-//   transition: 0.3s;
-// }
-// .resumebtn .btn:hover {
-//   background: #1a047e;
-// }
-// .resumebtn :hover i {
-//   transform: translateX(5px);
-// }
-// /* about media queries starts*/
-// @media screen and (max-width: 600px) {
-//   .about .row .image {
-//     margin-top: 2rem;
-//   }
-//   .about .row .image img {
-//     margin: 0 auto;
-//     width: 80%;
-//     mix-blend-mode: normal;
-//   }
-//   .about .row {
-//     padding: 0.5rem;
-//     margin-bottom: 7rem;
-//   }
-//   .about .row .content {
-//     padding: 1rem;
-//   }
-//   .about .row .content .box-container {
-//     gap: 0;
-//   }
-// }
 
 @media screen and (max-width:575px){
   .heading{
@@ -251,11 +123,31 @@
 
 @media screen and (min-width:768px) and (max-width:992px){
   .heading{
+    font-size: x-large;
+  }
+  .image img{
+    padding: 0;
+  width: 100%;
+  height: auto;
+  }
+
+  .content{
+    h3,.tag,.resumebtn{
+      font-size: large;      
+    }
+    p{
+      font-size: medium;
+    }
+  }
+}
+
+@media screen and (min-width:993px) and (max-width:1300px){
+  .heading{
     font-size: xx-large;
   }
   .image img{
     padding: 0;
-  width: 15rem;
+  width: 100%;
   height: auto;
   }
 

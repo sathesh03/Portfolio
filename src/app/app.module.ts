@@ -25,6 +25,7 @@ import { ProjectComponent } from './project/project.component';
 import { TestComponent } from './test/test.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card'
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { MatListModule } from '@angular/material/list';
     NgxSpinnerModule,
     MatSidenavModule,
     MatListModule,
+    MatCardModule
   ],
   providers: [
     provideClientHydration(),

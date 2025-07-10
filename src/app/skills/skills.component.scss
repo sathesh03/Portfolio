@@ -1,7 +1,7 @@
-//  skills section starts 
+// //  skills section starts 
 .skills {
-  min-height: 90vh;
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  // min-height: 90vh;
+  // background: linear-gradient(to bottom, #57059e, #4a00e0);
   padding: 1%;
   margin-top: 1%;
 }
@@ -12,74 +12,140 @@
   text-align: center;
 }
 
-.skills h2 {
-  color: #fff;
-}
+// .skills h2 {
+//   color: #fff;
+// }
 .skills .heading span {
-  color: rgb(255, 230, 0);
+  // color: rgb(255, 230, 0);
+  color: rgb(115, 3, 167);
 }
-.skills .container {
-  background: rgba(0, 0, 22, 0.4);
-  color: #fff;
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 90%;
-  margin: auto;
+
+.cardhead {
+  margin: 1% 6%;
+  background-color: rgba(0, 0, 22, 0.4);
 }
-.skills .container .row {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
-}
-.skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 22, 0.9);
-  transition: 0.2s;
-}
-.skills .container .bar:hover {
-  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-  background-color: rgba(0, 0, 0, 0.9) !important;
-}
-.skills .container .bar .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.skills .container .bar .info i {
-  font-size: 4rem;
-}
-.skills .container .bar .info span {
-  font-size: 2rem;
-  font-weight: 500;
-  font-family: "Poppins";
-  margin-left: 0.5rem;
-}
-// skills media queries starts
-@media screen and (max-width: 600px) {
-  .skills .container {
-    padding: 0;
-    margin: 0;
+
+.bar {
+  // width: 50rem !important;
+  transition: all 0.3s ease-in-out;
+  margin: 1%;
+
+  span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   }
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
-    gap: 1rem;
-  }
-  .skills .container {
-    margin-top: 5px;
-    width: 100%;
+  &:hover {
+    box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
+
+    span {
+      color: white;
+    }
   }
 }
 
-.iis {
-  filter: invert(1);
+.info {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-// skills media queries ends
-// skills section ends 
+
+// .cardhead{
+//   margin: 1% 6%;
+//   // padding: 2%;
+//   background-color: rgba(0, 0, 22, 0.4);
+
+//   mat-card{
+//     // width: 50rem !important;
+//     // margin: 2%;
+//       // padding: 2%;
+//       // width: 150%;
+//     mat-card-content{
+//        display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   // gap: 1rem;
+//   // margin-top: 1rem; 
+//     }
+//   }
+// }
+
+// .cardhead .bar {
+//   width: 50rem !important;
+// }
+
+//     .bar:hover{
+//   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+//   background-color: rgba(0, 0, 0, 0.9) !important;
+//   span{
+//     color: white;
+//   }
+//     }
+
+// .skills .container {
+//   background: rgba(0, 0, 22, 0.4);
+//   color: #fff;
+//   border-radius: 1rem;
+//   padding: 2rem;
+//   // width: 90%;
+//   margin: auto;
+// }
+// .skills .container .row {
+//   display: grid;
+//   grid-template-columns: repeat(6, 1fr);
+//   flex-wrap: wrap;
+//   gap: 1.8rem;
+// }
+// .skills .container .bar {
+//   margin-bottom: 15px;
+//   padding: 10px;
+//   border-radius: 1rem;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+//   background: rgba(0, 0, 22, 0.9);
+//   transition: 0.2s;
+// }
+// .skills .container .bar:hover {
+//   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+//   background-color: rgba(0, 0, 0, 0.9) !important;
+// }
+// .skills .container .bar .info {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 1rem;
+//   margin-top: 1rem;
+// }
+// // .skills .container .bar .info i {
+// //   font-size: 4rem;
+// // }
+// // .skills .container .bar .info span {
+// //   font-size: 2rem;
+// //   font-weight: 500;
+// //   font-family: "Poppins";
+// //   margin-left: 0.5rem;
+// // }
+// // skills media queries starts
+// @media screen and (max-width: 600px) {
+//   .skills .container {
+//     padding: 0;
+//     margin: 0;
+//   }
+//   .skills .container .row {
+//     grid-template-columns: repeat(2, 1fr);
+//     margin: 1rem;
+//     padding: 2rem 0.2rem 2rem 0.2rem;
+//     gap: 1rem;
+//   }
+//   .skills .container {
+//     margin-top: 5px;
+//     width: 100%;
+//   }
+// }
+
+// .iis {
+//   filter: invert(1);
+// }
+// // skills media queries ends
+// // skills section ends 

@@ -99,8 +99,8 @@ export class SkillsComponent {
           reset: true,
         });
 
-        sr.reveal('.skills .container', { interval: 200 });
-        sr.reveal('.skills .container .bar', { delay: 400 });
+        sr.reveal('.skills .cardhead', { interval: 200 });
+        sr.reveal('.skills .cardhead .bar', { delay: 400 });
       });
     }
   }
