@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 
@@ -7,7 +8,8 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private observer: BreakpointObserver) {}
+isExpanded = false;
 
   skills = [
     { name: 'Angular', icon: 'https://img.icons8.com/color/48/angularjs.png' },
@@ -82,12 +84,23 @@ export class SkillsComponent {
       name: 'AWS',
       icon: 'https://img.icons8.com/color/48/amazon-web-services.png',
     },
-    { name: 'REST API', icon: 'assets/images/skills/restapi_transparent.png' },
+    { name: 'REST API', icon: 'assets/images/skills/restapi.png' },
     { name: 'Microservice', icon: 'assets/images/skills/microservice.png' }, // fixed 000000
-    { name: 'VB.NET', icon: 'assets/images/skills/vbdotnet_transparent.png' },
+    { name: 'VB.NET', icon: 'assets/images/skills/vbdotnet.png',class:"pngColChg" },
     { name: 'SSRS', icon: 'assets/images/skills/ssrs.png' },
-    { name: 'Microsoft IIS', icon: 'assets/images/skills/microsoft-iis-transparent.png',class:"iis"},
+    { name: 'Microsoft IIS', icon: 'assets/images/skills/microsoft-iis.png',class:"pngColChg"},
   ];
+
+  isSmallScreen = false;
+  ngOnInit(): void {
+  this.observer.observe(['(max-width: 767px)']).subscribe(result => {
+      this.isSmallScreen = result.matches;
+      if (!this.isSmallScreen) {
+        this.isExpanded = false;
+      }
+    });
+}
+
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -104,4 +117,8 @@ export class SkillsComponent {
       });
     }
   }
+
+  toggleCard(): void {
+  this.isExpanded = !this.isExpanded;
+}
 }
