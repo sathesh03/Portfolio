@@ -24,4 +24,27 @@ export class ExperienceComponent {
       });
     }
   }
+
+  Experience:any = [
+    {projectname:'Real Time Dashboard',
+      description:`Integrated a real-time dashboard into ERP to visualize critical metrics such as shift performance, downtime and material flow.`,
+      duration:'Jan 2025 - present',direction:'right'
+    },
+    {projectname:'Facility Management System',
+      description:`Integrated facility management features into ERP to centralize gate pass approvals, asset logs and visitor entries.`,
+      duration:'Sep 2024 - Jan 2025',direction:'left'
+    },
+    {projectname:'Quality Management System',
+      description:`Integrated a QMS into ERP to manage manual quality inspections, verification and NCR handling across manufacturing units.`,
+      duration:'Nov 2023 - Aug 2024',direction:'right'
+    },
+    {projectname:'Production Management System',
+      description:`Integrated a Production Management module into ERP to streamline work orders, machine usage and shift planning.`,
+      duration:'Nov 2022 - Oct 2023',direction:'left'
+    },
+    {projectname:'HRMS - Performance Appraisal',
+      description:`Developed an Angular-based HRMS module to automate employee evaluations and feedback`,
+      duration:'Aug 2022 - Oct 2022',direction:'right'
+    }
+  ]
 }
