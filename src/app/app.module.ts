@@ -25,7 +25,8 @@ import { ProjectComponent } from './project/project.component';
 import { TestComponent } from './test/test.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card'
+import {MatCardModule} from '@angular/material/card';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MatCardModule} from '@angular/material/card'
     ExperienceComponent,
     ContactComponent,
     ProjectComponent,
-    TestComponent
+    TestComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

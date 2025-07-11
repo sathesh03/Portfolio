@@ -1,15 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
-import {
-  Component,
-  ElementRef,
-  Inject,
-  OnInit,
-  PLATFORM_ID,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { log } from 'console';
 import emailjs from 'emailjs-com';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -20,10 +12,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ContactComponent implements OnInit {
   contact: FormGroup;
-  constructor(
-    private fb: FormBuilder,
-    private snackBar: MatSnackBar,
-    private spinner: NgxSpinnerService,
+  constructor(private fb: FormBuilder, private snackBar: MatSnackBar, private spinner: NgxSpinnerService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.contact = this.fb.group({
@@ -101,7 +90,7 @@ export class ContactComponent implements OnInit {
         });
 
         sr.reveal('.contact .container', { delay: 400 });
-        sr.reveal('.contact .container .form-group', { delay: 400 });
+        sr.reveal('.contact .container form', { delay: 400 });
       });
     }
   }

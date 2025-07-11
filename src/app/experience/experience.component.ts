@@ -20,7 +20,7 @@ export class ExperienceComponent {
         });
 
         sr.reveal('.experience .timeline', { delay: 400 });
-        sr.reveal('.experience .timeline .container', { interval: 400 });
+        sr.reveal('.experience .timeline .timeline-container', { interval: 400 });
       });
     }
   }
