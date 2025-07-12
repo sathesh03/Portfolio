@@ -1,21 +1,8 @@
-<section class="experience mat-elevation-z8" id="experience">
+<!-- <section class="experience mat-elevation-z8" id="experience">
 
   <h2 class="heading mt-0"><i class="fas fa-briefcase"></i> Experience </h2>
 
   <div class="timeline">
-    <!-- @for(let data of experience){
-      <div class="container" [[ngClass]="data.direction"]>
-      <div class="content">
-        <div class="tag">
-          <h2>{{data.projectname}}</h2>
-        </div>
-        <div class="desc">
-            <h3>{{data.description}}</h3>
-            <p>{{data.duration}}</p>
-        </div>
-      </div>
-    </div>
-    } -->
 
     <div class="container right">
       <div class="content">
@@ -99,27 +86,40 @@ shift planning.</h3>
       <i class="fas fa-arrow-right"></i>
   </a>
   </div>
-</section>
+</section> -->
 
-<!-- <section class="experience mat-elevation-z8" id="experience">
+<section class="experience mat-elevation-z8" id="experience">
   <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
   <div class="timeline">
-    <div *ngFor="let data of Experience" class="timeline-container" [ngClass]="data.direction">
+    <div class="container" *ngFor="let data of Experience" [ngClass]="data.direction">
       <div class="content">
-        <div class="tag">
+        <mat-icon>work</mat-icon>
+
+        <mat-card class="mat-elevation-z2">
+  <mat-card-header>
+    <mat-card-title>{{data.projectname}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="mt-2">{{ data.description }}</mat-card-content>
+  <mat-card-actions class="p-3 fw-bold">{{ data.duration }}</mat-card-actions>
+</mat-card>
+
+        <!-- <div class="tag">
           <h2>{{ data.projectname }}</h2>
         </div>
         <div class="desc">
-          <h3>{{ data.description }}</h3>
-          <p>{{ data.duration }}</p>
-        </div>
+            <h3>{{ data.description }}</h3>
+            <p>{{ data.duration }}</p>
+        </div> -->
       </div>
     </div>
   </div>
-  <div class="morebtn">
+  <div class="btn">
+    <button mat-raised-button>View All <i class="fas fa-arrow-right"></i></button>
+  </div>
+  <!-- <div class="morebtn">
     <a href="/experience" class="btn">
       <span>View All</span>
       <i class="fas fa-arrow-right"></i>
     </a>
-  </div>
-</section> -->
+  </div> -->
+</section>
